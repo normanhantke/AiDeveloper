@@ -1,0 +1,77 @@
+{
+  "models": [
+    {
+      "title": "unser codellama",
+      "provider": "ollama",
+      "model": "codellama:7b-instruct",
+      "apiKey": "hamwanich",
+      "apiBase": "http://49.13.230.243:11434"
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "test",
+      "prompt": "{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
+      "description": "Write unit tests for highlighted code"
+    }
+  ],
+  "tabAutocompleteModel":     {
+    "title": "unser codellama",
+    "provider": "ollama",
+    "model": "deepseek-coder-v2:latest",
+    "apiKey": "hamwanich",
+    "apiBase": "http://49.13.230.243:11434"
+  },
+  "contextProviders": [
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
+      "params": {}
+    },
+    {
+      "name": "folder",
+      "params": {}
+    },
+    {
+      "name": "codebase",
+      "params": {}
+    }
+  ],
+  "slashCommands": [
+    {
+      "name": "edit",
+      "description": "Edit selected code"
+    },
+    {
+      "name": "comment",
+      "description": "Write comments for the selected code"
+    },
+    {
+      "name": "share",
+      "description": "Export the current chat session to markdown"
+    },
+    {
+      "name": "cmd",
+      "description": "Generate a shell command"
+    },
+    {
+      "name": "commit",
+      "description": "Generate a git commit message"
+    }
+  ]
+}
